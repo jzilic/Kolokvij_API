@@ -1,0 +1,16 @@
+create database kolokvij_api character set utf8 collate utf8_general_ci;
+use  kolokvij_api;
+create  table mjerenje(
+sifra int not null primary key auto_increment,
+lokacija varchar(50) not null,
+datum_mjerenja date not null,
+temperatura int not null,
+osoba varchar(100) not null
+)engine=innodb CHARACTER SET utf8 COLLATE utf8_general_ci;
+
+ 
+insert into mjerenje (lokacija, datum_mjerenja, temperatura, osoba) 
+values ('Osijek', '2011-11-22', 1, 'Mirko Koko');
+insert into mjerenje (lokacija, datum_mjerenja, temperatura, osoba) 
+values ('Otok', '2021-12-21', 2 , 'Marko Kiloloko');
+
